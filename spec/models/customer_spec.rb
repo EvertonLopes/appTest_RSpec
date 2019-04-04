@@ -3,5 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe Customer, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  fixtures :all # Or fixtures :name_created
+
+  it '' do
+    customer = customers(:amanda)
+    expect(customer.name).to eq('Amanda Brumm')
+  end
 end
